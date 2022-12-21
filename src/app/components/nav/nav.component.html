@@ -1,0 +1,15 @@
+<ul id="accordion" class="accordion" >
+    <li *ngFor="let menu of menus; let i = index">
+        <div #div class="menu align-center" (click)="toggle(i, menu)" [routerLink]="[menu.url]" [routerLinkActive]="'is-active'">
+          <img class="pr-10 m-0" [src]="menu.icon" />
+          {{ menu.name }}
+        </div>
+      
+        <ul class="submenu" #submenu 
+            [style.height.px]="menu.active ? submenu.scrollHeight : 0">
+            <li *ngFor="let submenu of menu.submenu; let j = index" [class.active]="submenu.active">
+            <a (click)="toggle2(menu, i, j)" [routerLink]="[submenu.url]" [routerLinkActive]="'is-active'">{{ submenu.name }}</a>
+            </li>
+        </ul>
+    </li>
+  </ul>

@@ -1,0 +1,118 @@
+<div class="right-container-inner scroll_bar">
+    <form style="width: 95%;" class="pt-05">
+        <div class="row w100 m-0">
+            <div class="w100">
+                <div class="row pb-05 align-center">
+                    <div class="text15 color-primary col-xs-12 col-sm-9 header-bar-title-1"></div>
+                    <div class="col-xs-12 col-sm-3 text-right header-bar-title-2">
+                        <input (ngModelChange)="dateChange($event)" [(ngModel)]="date" placeholder="Date" class="text-input2 mb-0" [matDatepicker]="dp3" [disabled]="true" [ngModelOptions]="{standalone: true}">
+                        <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+                        <mat-datepicker #dp3 [disabled]="false"></mat-datepicker><br>
+                    </div>
+                </div>
+
+                <div class="app-container">
+                    <div class="row pb-05 align-center">
+                        <div class="text15 color-primary col-xs-12 col-sm-10 fw700">User Profile</div>
+                    </div>
+                    <div class="row m-0 w100">
+                        <div class="col-xs-12 col-sm-12 p-0">
+                            <div class="profile-card mt-15">
+                                <div class="align-center">
+                                    <img class="img" src="assets/icons/pp.svg" alt="">
+                                    <div class="user-name fw700 color-white ml-20">Anthony James</div>
+                                </div>
+                        
+                                <div class="social-field">
+                                    <div class="align-center mb-05">
+                                        <img src="assets/icons/white-bg-phone.svg" alt="">
+                                        <div class="color-white ml-10">+234 810 366 7101</div>
+                                    </div>
+                                    <div class="align-center mb-05">
+                                        <img src="assets/icons/white-bg-message.svg" alt="">
+                                        <div class="color-white ml-10">fatayo@mytruq.com</div>
+                                    </div>
+                                    <div class="align-center mb-05">
+                                        <img src="assets/icons/white-bg-profile.svg" alt="">
+                                        <div class="color-white ml-10">Male</div>
+                                    </div>
+                                    <div class="align-center mb-05">
+                                        <img src="assets/icons/white-bg-location.svg" alt="">
+                                        <div class="color-white ml-10">19, Odunnukan Street, Yaba</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row pb-05 align-center mt-30 mb-10">
+                        <div class="text12 color-primary col-xs-12 col-sm-10 fw700">Organization Profile</div>
+                    </div>
+
+                    <div class="row m-0 w100">
+                        <div class="col-xs-12 col-sm-12 p-0">
+                            <div class="social-field2 pl-15">
+                                <div class="align-center mb-05">
+                                    <img src="assets/icons/blue-user.svg" class="mb-05" alt="">
+                                    <div class="color-primary pb-05 ml-10">AJALA VENTURES</div>
+                                </div>
+                                <div class="align-center mb-05">
+                                    <img src="assets/icons/blue-www.svg" class="mb-05" alt="">
+                                    <div class="color-primary pb-05 ml-10">www.ajalaventures.com</div>
+                                </div>
+                                <div class="align-center mb-05">
+                                    <img src="assets/icons/blue-suitcase.svg" class="mb-05" alt="">
+                                    <div class="color-primary pb-05 ml-10">Furniture</div>
+                                </div>
+                                <div class="align-center mb-05">
+                                    <img src="assets/icons/blue-location.svg" class="mb-05" alt="">
+                                    <div class="color-primary pb-05 ml-10">2, Awolowo Road, Ikoyi, Lagos</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ng-container>
+                        <div class="row pb-05 align-center mt-20 mb-05">
+                            <div class="text12 color-primary col-xs-12 col-sm-10 fw700">Branches</div>
+                        </div>
+    
+                        <div class="row m-0 w100">
+                            <div class="col-xs-12 col-sm-6 mb-10" *ngFor="let b of branches">
+                                <div class="row w100 m-0">
+                                    <ul uk-accordion class="w100 m-0">
+                                        <li class="text08">
+                                          <a class="exp uk-accordion-title text09 color-white" href="#">
+                                              <div class="-accordion-title">{{b.name}}</div>
+                                            </a>
+                                            <div class="uk-accordion-content mt-02 px-02">
+                                                <div class="row w100 ml-0 mb-0 mr-0 mt-10 color-primary space-between">
+                                                    <div class="w-40 text-left">Staff Name</div>
+                                                    <div class="w-40">Staff Phone Number</div>
+                                                    <div class="w-20 text-right">Staff Role</div>
+                                                </div>
+                                                <div class="row w100 ml-0 mb-0 mr-0 mt-10 color-333 fw100 space-between">
+                                                    <div class="border-bottom-2 col-xs-12 col-sm-12 fw100"></div>
+                                                </div>
+                                                <ng-container *ngFor="let s of b.staff">
+                                                    <div class="row w100 ml-0 mb-0 mr-0 mt-10 color-333 fw100 space-between">
+                                                        <div class="w-40 text-left">{{s.name}}</div>
+                                                        <div class="w-40">{{s.phone_number}}</div>
+                                                        <div class="w-20 text-right">{{s.role}}</div>
+                                                    </div>
+                                                    <div class="row w100 ml-0 mb-0 mr-0 mt-10 color-333 fw100 space-between">
+                                                        <div class="border-bottom-2 col-xs-12 col-sm-12 fw100"></div>
+                                                    </div>
+                                                </ng-container>                                                
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/gateway_musala_frontend'),
+      dir: require('path').join(__dirname, './coverage/Boiler-Plate'),
       subdir: '.',
       reporters: [
         { type: 'html' },

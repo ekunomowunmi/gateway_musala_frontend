@@ -1,0 +1,18 @@
+<div>
+    <mat-dialog-content class="m-0 px-20 py-15">
+        <div class="row w100 m-0">
+            <div class="col-xs-12 col-sm-12 p-0 mt-20 item-v-center">
+                <img [src]="data?.icon" class="m-0" />
+            </div>
+            <div class="col-xs-12 col-sm-12 p-0 mt-05 text-center">
+                <span>{{data?.message}}</span>
+            </div>
+            <div class="col-xs-12 col-sm-12 p-0 mt-0">
+                <app-main-btn (click)="modalResponse(1)" [btnText]="data?.btn1"></app-main-btn>   
+            </div>
+            <div class="col-xs-12 col-sm-12 p-0 mt-0">
+                <app-main-btn (click)="modalResponse(2)" [btnText]="data?.btn2"></app-main-btn> 
+            </div>
+        </div>
+    </mat-dialog-content>
+</div>

@@ -1,0 +1,44 @@
+.popup-conatiner {
+    border-radius: 5px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.07);
+    border-radius: 5px;
+}
+
+.note-header {
+    background: #F7F7FD;
+}
+
+.confirm-btn {
+    background: #2D3892;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 0.3rem .3rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-family: "Argentum Sans", sans-serif;
+    width: 90%;
+}
+
+.text-note {
+    font-size: .9rem;
+}
+
+@media (max-width: 425px) {
+    .text-note {
+        font-size: .8rem;
+    }
+
+    .confirm-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+    .confirm-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

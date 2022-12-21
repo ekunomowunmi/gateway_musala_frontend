@@ -1,0 +1,52 @@
+<div class="parent scroll_bar">
+
+    <div class="row pb-05 align-center">
+        <div class="text15 color-primary col-xs-12 col-sm-9 header-bar-title-1">
+            <app-nav-back [route]="'/dashboard/device'"></app-nav-back>
+        </div>
+    </div>
+
+    <div class="settings-container">
+        <div class="text15 fw700 color-primary mt-05 border-line pb-20">New Device</div>
+        <div class="row m-0 w100">
+            <div class="col-xs-12 col-sm-12 form-area">
+                <form>
+                    <div class="mt-30 item-v-center pr-30">
+                        <img class="img" src="assets/icons/pp.svg" alt="">
+                        <img class="cam" src="assets/icons/camera-icon.svg" alt="">
+                    </div>
+                    <div class="text12 color-primary mt-30 mb-15">Device Information</div>
+                    <div class="row">
+                        <div class="col-md-6 input-box">
+                            <label class="color-light " for="uid">UUID</label>
+                            <input class="b-btm-only" type="text" name="" id="uid"  [(ngModel)]="uid">
+                        </div>
+                        <div class="col-md-6 input-box">
+                            <label class="color-light " for="vendor">Vendor</label>
+                            <input class="b-btm-only" type="text" name="" id="vendor" [(ngModel)]="status">
+                        </div>
+                    </div>
+                    <div class="row mt-15">
+                        <div class="col-md-12 input-box ">
+                            <label class="color-light " for="email">Status</label>
+                            <ng-select
+                            class="trip-select"
+                            [items]="status"
+                            bindLabel="name"
+                            placeholder="Select Status"
+                            [ngModelOptions]="{standalone: true}"
+                            [virtualScroll]="true"
+                            [clearable]="false"
+                            [(ngModel)]="selectedStatus">
+                        </ng-select>
+                        </div>
+                    </div>
+                   
+                    <div class="btn-area m-auto">
+                        <app-main-btn [btnText]="btnText" (click)="saveDevice()"></app-main-btn>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container-inner scroll_bar">
+    <form>
+        <div class="row justify-content-center">
+            <div class="col-sm-8">
+                <div class="card text-center scroll_bar">
+                    <div class="card-body pt-50 pb-20">
+                        <img class="h3" src="assets/icons/company-logo.svg" alt="Company Logo"  />
+                        <div class="text15 fw700 my-20 color-primary">Welcome Back !</div>
+                        <div class="form-container">
+                            <div class="text-input">
+                                <img class="h1 m-0" src="assets/icons/call.svg" />
+                                <input type="text" class="w100 h100 text-input-2" placeholder="Enter your phone number" required>
+                            </div>
+                            <div class="text-input">
+                                <img class="m-0" src="assets/icons/lock.svg" />
+                                <input [type]="input_type" class="w100 h100 text-input-2" placeholder="Password" required>
+                                <img (click)="changeInputType()" class="m-0 h1-5" [src]="input_type === 'password' ? 'assets/icons/eye-see.svg' : 'assets/icons/eye-hide.svg'" />
+                            </div>
+                            <div class="w100 row mt-20 mx-0 space-between">
+                                <div class="p-0 align-center">
+                                    <input type="checkbox" id="iAccept" name="iAccept" class="mr-10">
+                                    <label class="m-0 color-black-7C fw100 text1" for="iAccept">Remember me</label>
+                                </div>
+                                <div class="p-0 item-right">
+                                    <p class="p-0 m-0 color-secondary fw100">Forgot Password</p>
+                                </div>
+                            </div>
+                            <app-main-btn [btnText]="btnText" class="w50" (click)="login()"></app-main-btn>
+                        </div>
+                        <div class="dont fw100 color-primary-add">Don’t Have an Account? <span class="text1 pl-02 cursor-pointer color-primary" (click)="register()">Sign Up</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,19 @@
+<div class="right-container-inner scroll_bar">
+  <form style="width: 95%;" class="pt-05">
+      <div class="row w100 m-0">
+          <div class="w100">
+              <div class="row pb-05 align-center">
+                  <div class="text15 color-primary col-xs-12 col-sm-9 header-bar-title-1"></div>
+                  <div class="col-xs-12 col-sm-3 text-right header-bar-title-2">
+                      <input (ngModelChange)="dateChange($event)" [(ngModel)]="date" placeholder="Date" class="text-input2 mb-0" [matDatepicker]="dp3" [disabled]="true" [ngModelOptions]="{standalone: true}">
+                      <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+                      <mat-datepicker #dp3 [disabled]="false"></mat-datepicker><br>
+                  </div>
+              </div>
+              <div class="trips-container">
+                  <app-all-gateways></app-all-gateways>
+              </div>
+          </div>
+      </div>
+  </form>
+</div>

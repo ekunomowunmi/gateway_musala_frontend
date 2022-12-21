@@ -1,0 +1,28 @@
+<div class="wrapper">
+    <div (click)="closeMenu()" class="cover_area"></div>
+    <div class="left-container">
+        <div class="w100 h100">
+            <p id="welcome"><img class="app-logo" src="assets/icons/truq-white.svg" /></p>
+            <app-menu (closeMenu)="doCloseMenu($event)"></app-menu>
+        </div>
+    </div>
+    
+    <div class="right-container">
+        <div class="right-container-header">
+            <div class="" style="width: 95%; display: flex;justify-content: space-between;">
+                <div class="row w100 m-0">
+                    <div class="col-xs-12 col-sm-6 p-0">
+                        <div class="w100 align-center">
+                            <img (click)="openMenu()" matRipple [matRippleCentered]="true" src="assets/icons/hamburger.svg" class="h2-5 hamburger" />
+                            <app-search class="w100"></app-search>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 text-right p-0 profile-btn">
+                        <app-profile-btn class="w100"></app-profile-btn>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <router-outlet></router-outlet>
+    </div>
+</div>
