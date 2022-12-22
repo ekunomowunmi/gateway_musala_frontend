@@ -1,0 +1,5 @@
+<div class="text12 fw600">
+    <span *ngFor="let b of events.breadcrumb; let i = index;">
+        <span [ngClass]="i === 0 ? 'color-primary-double' : 'color-primary-deep'">{{i === 0 ? b : ' /' + b}}</span>
+    </span>
+</div>

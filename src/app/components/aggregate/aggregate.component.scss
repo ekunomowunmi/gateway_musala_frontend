@@ -1,0 +1,56 @@
+.exp {
+    padding: 1rem;
+    background: #2D3892;
+    color: #ffffff!important;
+    border-radius: 4px;
+    font-size: 14px!important;
+}
+
+.uk-accordion-title::before{
+    background-image: url('../../../assets/icons/aft.svg');
+}
+
+.uk-open>.uk-accordion-title::before{
+    background-image: url('../../../assets/icons/bef.svg')!important;
+}
+
+.asset-name2 {
+    font-size: .9rem;
+}
+
+.total-amount {
+    font-size: 1.2rem;
+}
+
+.-accordion-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .asset-name2 {
+        font-size: .7rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .asset-name2 {
+        font-size: .7rem;
+    }
+
+    .total-amount {
+        font-size: .8rem;
+    }
+
+    .total-amount-2 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .asset-name {
+        font-size: .7rem;
+    }
+
+}

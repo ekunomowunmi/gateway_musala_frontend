@@ -1,0 +1,62 @@
+.profile-path {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: #ffffff;
+    padding: 4px;
+    box-shadow: 0px 4px 8px #2c27380a;
+}
+
+.profiles {
+    position: relative;
+    cursor: pointer;
+}
+
+.node_ {
+    height: 10px;
+    width: 10px;
+    background: #ff0102;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+}
+
+.k-animation-container-shown {
+    top: 73.0781px !important;
+    width: 25%;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.profile-container {
+    justify-content: flex-end;
+    padding-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .k-animation-container-shown {
+        width: 35%;
+    }
+}
+
+@media (max-width: 768px) {
+    .k-animation-container-shown {
+        width: 50%;
+    }
+}
+
+@media (max-width: 425px) {
+    .profile-container {
+        justify-content: space-between;
+    }
+
+    .k-animation-container-shown {
+        width: 80%;
+    }
+}
+
+@media (max-width: 375px) {
+    .k-animation-container-shown {
+        width: 100%;
+    }
+}

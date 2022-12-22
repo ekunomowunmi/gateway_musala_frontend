@@ -1,0 +1,135 @@
+.accordion {
+  width: 100%;
+  // max-width: 360px;
+  margin: auto;
+  border-radius: 0px;
+  list-style: none;
+  padding: 0;
+  font-size: 16px;
+}
+  
+.accordion .menu {
+  position: relative;
+  padding: 24px 15px 24px 45px;
+  color: #ffffff;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border-bottom: 0;
+  font-size: 16px;
+  font-weight: 300;
+  width: 85%;
+  margin: auto;
+}
+  
+.accordion li:last-child .menu {
+  border-bottom: 0;
+}
+
+.accordion li i {
+  position: absolute;
+  top: 1.2rem;
+  left: 1rem;
+  color: #595959;
+  transition: all 0.4s ease;
+}
+  
+.accordion li i.fa-chevron-down {
+  right: 1rem;
+  left: auto;
+}
+  
+.accordion li.active i.fa-chevron-down {
+  transform: rotate(180deg);
+}
+  
+.is_active  {
+  color: #1ACC00!important;
+  background: rgba(248, 248, 248, .03)!important;
+  border-right: 8px solid #1ACC00;
+  border-bottom: 0;
+}
+
+.accordion li.active i {
+  color: #b63b4d;
+}
+  
+.accordion li.active .submenu li.active {
+  color: #1ACC00!important;
+  font-weight: bold;
+}
+
+.accordion li.active .submenu li {
+  color: #ffffff;
+}
+  
+.submenu {
+  height: 0;
+  overflow: hidden;
+  background: none;
+  font-size: 14px;
+  transition: height 0.4s ease;
+  list-style: none;
+}
+  
+.submenu li {
+  border-bottom: 0px;
+}
+  
+.accordion li:last-child .submenu {
+  border-radius: 0;
+}
+
+.accordion li:last-child .submenu li:last-child {
+  border-bottom: 0;
+}
+  
+.submenu a {
+  display: block;
+  text-decoration: none;
+  padding: 12px;
+  padding-left: 42px;
+  transition: all 0.25s ease-in-out;
+  color: #fff;
+}
+
+a.is-active {
+  color: #1ACC00!important;
+}
+
+div.is-active {
+  color: #ffffff !important;
+  font-weight: 500 !important;
+  background: #4B57B6;
+  border-right: 8px solid #1ACC00;
+  border-bottom: 0;
+  width: 85%;
+  margin: auto;
+  border-radius: 10px;
+}
+  
+.submenu a:hover {
+  background: rgba(255, 255, 255, .2);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .accordion .menu {
+    padding: 24px 15px 24px 22px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .accordion .menu {
+    padding: 24px 15px 24px 22px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 425px) {
+  .accordion .menu {
+    padding: 24px 15px 24px 22px;
+    font-size: 14px;
+  }
+}

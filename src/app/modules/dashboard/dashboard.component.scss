@@ -1,0 +1,191 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .left-container {
+    height: 100vh;
+    display: flex;
+    background-position: center;
+    background-size: inherit;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: .25;
+    background: #2D3892;
+    padding-top: 13%;
+    #welcome {
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 40px;
+      color: #ffffff;
+      font-family: 'Argentum Sans', sans-serif;
+      text-align: center;
+      position: absolute;
+      top: 6%;
+      left: 6%;
+      z-index: 1;
+    }
+  }
+  .right-container {
+    flex: 1;
+    height: 100vh;
+    background: #F8F8F8;
+    position: relative;
+    overflow: hidden;
+    .right-container-header {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      padding-top: 2rem;
+    }
+  }
+}
+
+.app-logo {
+  height: 2.5rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.profile-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: -300px;
+  }
+  50% {
+    margin-left: 0%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .app-logo {
+    height: 2.0rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-container {
+    display: none !important;
+  }
+
+  .backdrop {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+  .left-container.hamburger-menu {
+    // display: none !important;
+    padding-top: 20%!important;
+    width: 40%;
+    display: flex!important;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    animation-duration: 2s;
+    animation-name: slidein;
+
+    #welcome {
+      top: 6%;
+      left: 8%!important;
+    }
+  }
+  
+  .right-container {
+    background-position: center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .hamburger {
+    display: block;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .profile-btn {
+    justify-content: space-between;
+  }
+
+  .backdrop {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+  .left-container.hamburger-menu {
+    // display: none !important;
+    padding-top: 30%!important;
+    width: 100%;
+    display: flex!important;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    animation-duration: 2s;
+    animation-name: slidein;
+
+    #welcome {
+      top: 6%;
+      left: 8%!important;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+
+  .backdrop {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+
+  .left-container.hamburger-menu {
+    // display: none !important;
+    padding-top: 40%!important;
+    width: 100%;
+    display: flex!important;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    animation-duration: 2s;
+    animation-name: slidein;
+
+    #welcome {
+      top: 6%;
+      left: 8%!important;
+    }
+  }
+}
+
+
+  

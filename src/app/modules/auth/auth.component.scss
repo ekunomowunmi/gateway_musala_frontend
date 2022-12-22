@@ -1,0 +1,26 @@
+.wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      .full-container {
+        flex: 1;
+        height: 100vh;
+        background: #F8F8F8;
+        position: relative;
+    }
+}
+
+@media (max-width: 1024px) {
+    
+}
+
+@media (max-width: 768px) {
+    .full-container {
+        background-position: center !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+    }
+}
+
+
+  

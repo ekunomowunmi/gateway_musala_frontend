@@ -1,0 +1,170 @@
+.right-container-inner {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: calc(100vh - 125px);
+  background: #F8F8F8;
+  width: 100%;
+  overflow-y: auto;
+  // padding-top: 2rem;
+}
+
+.text-input2 {
+  margin: 0rem 0 1rem 0;
+  width: 100%;
+  border-radius: 12px;
+  background: #ffffff;
+  border: none;
+  color: #00205C;
+  padding: 1.2rem 1rem;
+  line-height: 1.3rem;
+  font-family: 'Argentum Sans', sans-serif;
+  font-size: 0.9rem;
+  &:focus {
+      outline: none;
+  }
+}
+
+.app-container {
+  padding: 1rem;
+  background: #ffffff;
+  // height: 70vh;
+}
+
+.line_ {
+  position: absolute;
+  left: 2.5%;
+  top: 26%;
+  height: 100%;
+  padding-top: 6px;
+  padding-bottom: 10px;
+}
+
+.check-mark_ {
+  padding: 0px 0px 0px 1.8%;
+  img {
+      height: 16px;
+  }
+}
+
+.line__ {
+  border-left: 1px dashed #2D3892;
+  height: 100%;
+}
+
+.user-image-container {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.25);
+}
+
+.profile-btn {
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-around{
+  display: flex;
+  justify-content: space-between;
+}
+
+.padding-bottom-1{
+  padding-bottom: 1rem;
+}
+
+.green{
+  color:#00c234;
+}
+
+.red{
+  color: #ec3400;
+}
+
+.gateway-header{
+  font-size: x-large;
+  font-weight: bold;
+  color:#2D3892
+}
+
+.font-weight-bold{
+  font-weight: bold;
+}
+
+.header-bar-title-2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.message {
+  font-size: .8rem;
+}
+
+.asset-name {
+  font-size: .8rem;
+}
+
+.total-amount-2 {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .line_ {
+      left: 2.7%;
+      top: 26%;
+  }
+}
+
+@media (max-width: 768px) {
+  .right-container {
+      background-position: center !important;
+      background-size: contain !important;
+      background-repeat: no-repeat !important;
+  }
+
+  .line_ {
+      left: 2.7%;
+      top: 26%;
+  }
+
+  .total-amount-2 {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .header-bar-title-1, .header-bar-title-2 {
+      padding-bottom: 1rem;
+  }
+
+  .line_ {
+      left: 3.7%;
+      top: 26%;
+  }
+
+  .message {
+      font-size: .7rem;
+  }
+  
+  .asset-name {
+      font-size: .7rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .line_ {
+      position: absolute;
+      left: 4.5%;
+      top: 26%;
+      height: 100%;
+      padding-top: 6px;
+      padding-bottom: 10px;
+  }
+}

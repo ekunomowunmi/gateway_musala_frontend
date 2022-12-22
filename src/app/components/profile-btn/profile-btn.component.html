@@ -1,0 +1,23 @@
+
+<div class="d-flex align-items-center profile-container">
+    <div class="px-10">
+        <a #anchor (click)="toggle()"><img src="assets/icons/notification.svg" /></a>
+    </div>
+    <kendo-popup #popup [anchor]="$any(anchor)" [anchorAlign]="anchorAlign" [popupAlign]="popupAlign" popupClass="content" *ngIf="show">
+        <app-notification class="w100"></app-notification>
+    </kendo-popup>
+    <div>
+        <a><h4 class="m-0 color-primary text-right header-r text1">Ekun Omowunmi</h4></a>
+    </div>
+    <div class="ml-10 color-right profiles">
+        <div class="profile-path cursor-pointer">
+            <img src="assets/icons/pp.svg" class="h100 w100 rounded_" />
+        </div>
+    </div>
+    <div class="px-10">
+        <h4 class="m-0 color-primary text-right header-r text1 fw100">8:25PM</h4>
+    </div>
+    <div>
+        <a><img src="assets/icons/log_out.svg" /></a>
+    </div>
+</div>

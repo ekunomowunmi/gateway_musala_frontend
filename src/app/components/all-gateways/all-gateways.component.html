@@ -1,0 +1,27 @@
+<div>
+  <div class="text15 fw700 color-primary py-10">Gateways</div>
+  <div class="mt-10">
+       <table class="table" id="table_">
+          <thead>
+              <tr>
+                  <th scope="col" sortable="id">Id</th>
+                  <th scope="col" sortable="serialNumber">Serial No.</th>
+                  <th scope="col" sortable="user">Name</th>
+                  <th scope="col" sortable="receiver">IP Address</th>
+                  <th scope="col" sortable="drop_off">Devices</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr class="table-row" (click)="gatewayDetails(request)" *ngFor="let request of gateways ; index as i">
+                  <td>{{ request.id }}</td>
+                  <td>{{ request.serialNumber }}</td>
+                  <td>{{ request.name }}</td>
+                  <td>{{ request.ipAddress }}</td>
+                  <td>{{ request.devices | arrayLength }}</td>
+                
+              </tr>
+          </tbody>
+      </table>
+
+  </div>
+</div>
