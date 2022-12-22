@@ -1,0 +1,48 @@
+<div class="container-inner scroll_bar">
+    <form>
+        <div class="row justify-content-center">
+            <div class="col-sm-8">
+                <div class="card text-center scroll_bar">
+                    <app-auth-back class="auth-back"></app-auth-back>
+                    <div class="card-body pt-50 pb-20">
+                        <img class="h3" src="assets/icons/company-logo.svg" alt="Company Logo"  />
+                        <div class="text15 color-black-7C fw700 mt-20 mb-10 color-primary">Sign Up</div>
+                        <div class="text12 color-black-7C fw100 mtt-05">Sign up to continue</div>
+                        <div class="form-container">
+                            <div class="text-input">
+                                <img class="h1 m-0" src="assets/icons/person.svg" />
+                                <input type="text" class="w100 h100 text-input-2" placeholder="Enter your name" required>
+                            </div>
+                            <div class="text-input">
+                                <img class="h1 m-0" src="assets/icons/call.svg" />
+                                <input type="text" class="w100 h100 text-input-2" placeholder="Enter your phone number" required>
+                            </div>
+                            <div class="text-input">
+                                <img class="m-0" src="assets/icons/message.svg" />
+                                <input type="email" class="w100 h100 text-input-2" placeholder="Enter your email" required>
+                            </div>
+                            <div class="text-input">
+                                <img class="m-0" src="assets/icons/lock.svg" />
+                                <input [type]="input_type_1" class="w100 h100 text-input-2" placeholder="Enter password" required>
+                                <img (click)="changeInputType(0)" class="m-0 h1-5" [src]="input_type_1 === 'password' ? 'assets/icons/eye-see.svg' : 'assets/icons/eye-hide.svg'" />
+                            </div>
+                            <div class="text-input">
+                                <img class="m-0" src="assets/icons/lock.svg" />
+                                <input [type]="input_type_2" class="w100 h100 text-input-2" placeholder="Confirm password" required>
+                                <img (click)="changeInputType(1)" class="m-0 h1-5" [src]="input_type_2 === 'password' ? 'assets/icons/eye-see.svg' : 'assets/icons/eye-hide.svg'" />
+                            </div>
+                            <div class="w100 row mt-20 mx-0 space-between">
+                                <div class="p-0 align-center">
+                                    <input type="checkbox" id="iAccept" name="iAccept" class="mr-10">
+                                    <label class="m-0 color-black-7C fw100 text08" for="iAccept">I accept all <span class="color-primary fw400">Terms & Conditions</span></label>
+                                </div>
+                            </div>
+                            <app-main-btn [btnText]="btnText" class="w50" (click)="next()"></app-main-btn>
+                        </div>
+                        <div class="dont fw100 color-primary-add">Already Have an Account? <span class="text1 pl-02 cursor-pointer color-primary">Sign In</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

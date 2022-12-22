@@ -1,0 +1,37 @@
+<div class="right-container-inner scroll_bar">
+    <form style="width: 95%;" class="pt-05">
+        <div class="row w100 m-0">
+            <div class="w100">
+                <div class="row pb-05 align-center">
+                    <div class="text15 color-primary col-xs-12 col-sm-9 header-bar-title-1">Good morning, Musala</div>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+                    <div class="col mb-4 card-tiles">
+                        <div class="uk-card uk-card-default uk-card-body py-05 card-contents" (click)="gotoGateways()">
+                            <img src="assets/icons/wallet2.svg"/>
+                            <div class="card-texts">
+                                <div class="text1 fw100">Total Gateways</div>
+                                <div class="color-primary amounts">{{gatewaysLength}}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-4 card-tiles">
+                        <div class="uk-card uk-card-default uk-card-body py-05 card-contents" (click)="gotoDevices()">
+                            <img src="assets/icons/truck.svg"/>
+                            <div class="card-texts">
+                                <div class="text1 fw100">Total Devices</div>
+                                <div class="color-primary amounts">{{deviceLength}}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="trips-container">
+                    <app-gateways></app-gateways>
+                </div>
+
+
+            </div>
+        </div>
+    </form>
+</div>

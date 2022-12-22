@@ -1,0 +1,45 @@
+<div class="right-container-inner scroll_bar">
+  <form style="width: 95%;" class="pt-05">
+      <div class="row w100 m-0">
+          <div class="w100">
+              <div class="row pb-05 align-center">
+                  <div class="text15 color-primary col-xs-12 col-sm-9 header-bar-title-1"></div>
+                  <div class="col-xs-12 col-sm-3 text-right header-bar-title-2">
+                     
+                  </div>
+              </div>
+              <div class="trips-container">
+                <div>
+                  <div class="text15 fw700 color-primary py-10">Devices</div>
+                  <div class="mt-10">
+                       <table class="table" id="table_">
+                    
+                          <thead>
+                              <tr>
+                                  <th scope="col" sortable="id">Id</th>
+                                  <th scope="col" sortable="uid">UUID</th>
+                                  <th scope="col" sortable="vendor">Vendor</th>
+                                  <th scope="col" sortable="dateCreated">Date Created</th>
+                                  <th scope="col" sortable="status">Status</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr class="table-row" *ngFor="let request of devices ; index as i">
+                                  <td>{{ request.id }}</td>
+                                  <td>{{ request.uid }}</td>
+                                  <td>{{ request.vendor }}</td>
+                                  <td>{{ request.dateCreated }}</td>
+                                  <td [ngClass]="request?.status == 'ONLINE' ? 'green':'red'" >{{ request.status }}</td>
+                                
+                              </tr>
+                          </tbody>
+                      </table>
+                
+                  </div>
+                </div>
+                
+              </div>
+          </div>
+      </div>
+  </form>
+</div>
